@@ -1,0 +1,174 @@
+/* General rules for document*/
+
+body{
+    margin: 0;
+    background-color: #999999;
+    font-family: 'Smythe', sans-serif;
+}
+
+main{
+    background-color: #ffffff;
+}
+
+header, main {
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.relative{
+    position: relative;
+}
+
+.absolute{
+    position: absolute;
+    margin: 0;
+}
+
+h2,p{
+    margin: 0;
+}
+
+/* Header rules*/
+header{
+    display: flex;
+    box-sizing: border-box;
+    height: 167px;
+    padding: 0px 45px;
+    margin-bottom: 0;
+    background-color: pink;
+}
+
+.header-container{
+    align-self: center;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+}
+
+.title,.subtitle{
+    margin: 0;
+    align-self: flex-start;
+    color: #ffffff;
+}
+
+
+/* Menu content*/
+.flex-container{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 0px 45px 30px 45px;
+}
+
+.item{
+    width: 508px;
+    height: 140px;
+    border-bottom: 2px solid #999999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+}
+
+.inner-item{
+    display: flex;
+    gap: 31px;
+    align-items: center; 
+}
+
+.inner-text{
+    position: relative;
+}
+
+.icon{
+    font-size: 50px;
+    margin: 0;
+}
+
+.add-btn{
+    margin-left: auto;
+    border-radius: 999px;
+    height: 50px;
+    width: 50px;
+    border: 1px solid #DEDEDE;
+    background-color: #ffffff;
+    font-size: 32px;
+    color: #3c3c3c;
+    font-weight: 200;
+}
+
+.food-name, .ingredients{
+    margin: 4px;
+}
+
+.price{
+    position: absolute;
+    top: 60px;
+    left: 4px;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Order menu */
+
+.order-container{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    padding: 0px 45px 67px;
+}
+
+.order-items{
+    margin-top: 30px;
+    padding-bottom: 15px;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0px;
+    border-bottom: 2.5px solid #3c3c3c;
+}
+
+.order-item{
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+}
+
+.remove-btn{
+    border: none;
+    background-color: #ffffff;
+    color:#999999;
+    cursor: pointer;
+}
+
+.order-price{
+    margin-left: auto;
+}
+
+.total-price{
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+    gap: 10px;
+    align-items: center;
+}
+
+.order-btn{
+    margin-top: 30px;
+    width: 100%;
+    padding: 18px 0px;
+    background-color: #16DB99;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+}
+
+#order-content{
+    width: 100%;
+}
