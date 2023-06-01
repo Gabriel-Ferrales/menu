@@ -2,7 +2,6 @@
 
 body{
     margin: 0;
-    background-color: #999999;
     font-family: 'Smythe', sans-serif;
 }
 
@@ -169,6 +168,63 @@ header{
     border-radius: 3px;
 }
 
+button{
+    cursor: pointer;
+}
+
 #order-content{
     width: 100%;
+}
+
+#total-price{
+    margin-left: auto;
+}
+
+.payment-modal{
+    position: fixed;
+    height: 524px;
+    width: 524px;
+    background-color: #ffffff;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 45px 24px 30px;
+    gap: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 0px 5px 11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 5px 11px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 5px 11px rgba(0,0,0,0.75);
+}
+
+.payment-modal input {
+    box-sizing: border-box;
+    height: 71px;
+    width: 475px;
+    padding-left: 25px;
+    font-size: 20px;
+
+}
+
+.payment-modal h2 {
+    margin-bottom: 40px;
+}
+
+.submit{
+    margin-top: 40px;
+    background-color: #16DB99;
+    border: none;
+    border-radius: 3px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.hidden{
+    display: none;
 }

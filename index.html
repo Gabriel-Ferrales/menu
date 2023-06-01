@@ -14,73 +14,37 @@
             </div>
         </header>
         <main>
-           <div class="flex-container">
+           <div class="flex-container" id="menu-container">
 
-                <div class="item">
-                    <div class="inner-item">
-                        <p class="icon">
-                            🍕
-                        </p>
-                        <div class="inner-text">
-                            <h3 class="food-name">Pizza</h3>
-                            <p class="ingredients">Peperoni, mushrom, mozzarella</p>
-                            <h4 class="price">$5</h4>
-                        </div>
-                        <button class="add-btn">+</button>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="inner-item">
-                        <p class="icon">
-                            🍕
-                        </p>
-                        <div >
-                            <h3 class="food-name">Pizza</h3>
-                            <p class="ingredients">Peperoni, mushrom, mozzarella</p>
-                        </div>
-                        <button class="add-btn">+</button>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="inner-item">
-                        <p class="icon">
-                            🍕
-                        </p>
-                        <div>
-                            <h3 class="food-name">Pizza</h3>
-                            <p class="ingredients">Peperoni, mushrom, mozzarella</p>
-                        </div>
-                        <button class="add-btn">+</button>
-                    </div>
-                </div>
+            <!-- HERE THE MENU ITEMS WILL RENDER-->
                
            </div>
 
-           <div class="order-container">
+           <div class="order-container ">
                 <div id="order-content">
                     <h2>Your order</h2>
-                    <div class="order-items">
-                        <div class="order-item">
-                            <h2>Pizza</h2>
-                            <button class="remove-btn">🗑️</button>
-                            <p class="order-price">$14</p>
-                        </div>
-                        <div class="order-item">
-                            <h2>Pizza</h2>
-                            <button class="remove-btn">🗑️</button>
-                            <p class="order-price">$14</p>
-                        </div>
+                    <div class="order-items" id="order-elements">
+
+                   
+
                     </div>
                     <div class="total-price">
                         <h2>Total price:</h2>
-                        <p class="order-price">$14</p>
+                        <p id="total-price">$0</p>
                     </div>
                 </div>
                 <button class="order-btn">Complete Order</button>
            </div>
 
+        <div class="payment-modal hidden">
+            <h2>Enter card Details</h2>
+            <input type="text" placeholder="Enter your name">
+            <input type="text" placeholder="Enter card number">
+            <input type="text" placeholder="Enter CVV">
+            <input type="submit" value="Pay" class="submit">
+        </div>
+
         </main>
+        <script src="index.js" type="module"></script>
     </body>
 </html>
