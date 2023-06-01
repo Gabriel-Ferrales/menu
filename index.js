@@ -2,7 +2,9 @@ import { menuArray } from "./data.js";
 
 const menuContainer = document.getElementById("menu-container")
 const orderElements = document.getElementById("order-elements")
+const orderContainer = document.getElementById("order-container")
 
+render()
 
 function render(){
     let htmlString = ""
@@ -32,7 +34,7 @@ document.addEventListener("click", function(e){
     else if (e.target.classList.contains("remove-btn")){
         removeParent(e.target)
     }
-    else if (e.target.classList.contains("order-btn")){
+    else if (e.target.classList.contains("order-btn") && document.getElementById("total-price").innerHTML != "$0"){
         sendOrder()
     }
 })
@@ -63,38 +65,22 @@ function sumTotal(){
     for (let item of items){
         total += Number(item.textContent)
     }
-    totalElement.innerHTML = total
+    totalElement.innerHTML = `$${total}`
 } 
 
 function removeParent(element){
-    element.parentElement.innerHTML = ""
+    element.parentElement.remove()
     sumTotal()
 }
 
 function sendOrder(){
-    
-}
+    let paymentModal = document.getElementById("payment-modal")
+    paymentModal.classList.remove("hidden")
+    document.getElementById("send-order").addEventListener("click", function(){
+        paymentModal.classList.add("hidden") 
+    })
+    orderContainer.innerHTML = `<div class="order-succesful">
+                                    <h2>Thanks James, your order is on its way!</h2>
+                                </div>`
 
-render()
-
-
-
-function elements(){
-    /*<div class="order-item">
-        <h2>${FOOD NAME HERE}</h2>
-        <button class="remove-btn">🗑️</button>
-        <p class="order-price">${FOOD PRICE HERE}</p>
-    </div>
-
-    <div class="order-item">
-    <h2>Pizza</h2>
-    <button class="remove-btn">🗑️</button>
-    <p class="order-price">$14</p>
-    </div>
-
-    <div class="order-item">
-    <h2>Pizza</h2>
-    <button class="remove-btn">🗑️</button>
-    <p class="order-price">$14</p>
-    </div>*/
 }

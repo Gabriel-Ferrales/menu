@@ -20,7 +20,7 @@
                
            </div>
 
-           <div class="order-container ">
+           <div class="order-container" id="order-container">
                 <div id="order-content">
                     <h2>Your order</h2>
                     <div class="order-items" id="order-elements">
@@ -36,12 +36,12 @@
                 <button class="order-btn">Complete Order</button>
            </div>
 
-        <div class="payment-modal hidden">
-            <h2>Enter card Details</h2>
-            <input type="text" placeholder="Enter your name">
-            <input type="text" placeholder="Enter card number">
-            <input type="text" placeholder="Enter CVV">
-            <input type="submit" value="Pay" class="submit">
+        <div class="payment-modal hidden" id="payment-modal">
+                <h2>Enter card Details</h2>
+                <input type="text" placeholder="Enter your name">
+                <input type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19"  placeholder="Enter card number">
+                <input type="tel" inputmode="numeric" pattern="[0-9\s]{3}" maxlength="3"  placeholder="Enter CVV">
+                <input type="button" value="Pay" class="submit" id="send-order">
         </div>
 
         </main>

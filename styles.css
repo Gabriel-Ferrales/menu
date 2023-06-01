@@ -228,3 +228,14 @@ button{
 .hidden{
     display: none;
 }
+
+.order-succesful{
+    background: #ECFDF5;
+    color: #065F46;
+    margin-top: 15px;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
